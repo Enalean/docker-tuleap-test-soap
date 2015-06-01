@@ -20,8 +20,7 @@ RUN rpm -i http://mir01.syntis.net/epel/6/i386/epel-release-6-8.noarch.rpm && \
     php-password-compat \
     php-zendframework \
     htmlpurifier \
-    jpgraph-tuleap \
-    php-restler && \
+    jpgraph-tuleap && \
     yum clean all
 
 RUN service mysqld start && sleep 1 && mysql -e "GRANT ALL PRIVILEGES on *.* to 'integration_test'@'localhost' identified by 'welcome0'"
