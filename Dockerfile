@@ -6,7 +6,7 @@ MAINTAINER Yannis ROSSETTO, yannis.rossetto@enalean.com
 
 COPY Tuleap.repo /etc/yum.repos.d/
 
-RUN rpm -i http://mir01.syntis.net/epel/6/i386/epel-release-6-8.noarch.rpm && \
+RUN yum -y install epel-release && \
     yum -y install php \
     php-soap \
     php-mysql \
@@ -19,6 +19,7 @@ RUN rpm -i http://mir01.syntis.net/epel/6/i386/epel-release-6-8.noarch.rpm && \
     httpd \
     php-password-compat \
     php-zendframework \
+    php-ZendFramework2-Loader \
     htmlpurifier \
     jpgraph-tuleap && \
     yum clean all
