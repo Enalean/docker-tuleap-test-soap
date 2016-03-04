@@ -18,6 +18,7 @@ RUN yum -y install epel-release && \
     mysql-server \
     httpd \
     php-password-compat \
+    php-paragonie-random-compat \
     php-zendframework \
     php-ZendFramework2-Loader \
     htmlpurifier \
