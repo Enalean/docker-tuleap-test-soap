@@ -2,7 +2,7 @@ FROM centos:6
 
 COPY Tuleap.repo /etc/yum.repos.d/
 
-RUN yum -y install epel-release && \
+RUN yum -y install epel-release centos-release-scl && \
     yum -y install \
         tuleap \
         httpd \
