@@ -7,6 +7,7 @@ RUN yum -y install epel-release && \
         tuleap \
         httpd \
         mysql-server \
+        php-ZendFramework2-Mail \
     && \
     yum remove -y tuleap \
         tuleap-core-subversion \
