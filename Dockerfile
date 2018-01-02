@@ -5,9 +5,8 @@ COPY Tuleap.repo /etc/yum.repos.d/
 RUN yum -y install epel-release centos-release-scl && \
     yum -y install \
         tuleap \
-        httpd \
+        httpd24-httpd \
         mysql-server \
-        php-ZendFramework2-Mail \
     && \
     yum remove -y tuleap \
         tuleap-core-subversion \
