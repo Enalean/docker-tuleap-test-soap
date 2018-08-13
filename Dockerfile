@@ -8,20 +8,20 @@ RUN yum -y install epel-release centos-release-scl && \
         tuleap \
         httpd24-httpd \
         mysql-server \
-        php56-php-mysqlnd \
-        php56-php-pdo \
-        php56-php-xml \
-        php56-php-mbstring \
-        php56-php-gd \
-        php56-php-soap \
-        php56-php-pear \
-        php56-php-intl \
-        php56-php-process \
-        php56-php-cli \
-        php56-php-bcmath \
-        php56-php-fpm \
-        php56-php-opcache \
-        php56-php-pecl-jsonc \
+        php72-php-mysqlnd \
+        php72-php-pdo \
+        php72-php-xml \
+        php72-php-mbstring \
+        php72-php-gd \
+        php72-php-soap \
+        php72-php-pear \
+        php72-php-intl \
+        php72-php-process \
+        php72-php-cli \
+        php72-php-bcmath \
+        php72-php-fpm \
+        php72-php-opcache \
+        php72-php-pecl-jsonc \
     && \
     yum remove -y tuleap \
         tuleap-core-subversion \
@@ -29,5 +29,7 @@ RUN yum -y install epel-release centos-release-scl && \
         tuleap-documentation && \
     yum clean all && \
     curl -k -sS https://getcomposer.org/installer | php && mv composer.phar /usr/local/bin
+
+ENV PHP_VERSION 72
 
 CMD /usr/share/tuleap/tests/soap/bin/run.sh
