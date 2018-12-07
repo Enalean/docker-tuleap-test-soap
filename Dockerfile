@@ -3,6 +3,8 @@ FROM centos:6
 COPY RPM-GPG-KEY-remi /etc/pki/rpm-gpg/
 COPY *.repo /etc/yum.repos.d/
 
+COPY --from=composer:1.8 /usr/bin/composer /usr/local/bin/composer
+
 RUN yum -y install epel-release centos-release-scl && \
     yum -y install \
         tuleap \
@@ -27,8 +29,7 @@ RUN yum -y install epel-release centos-release-scl && \
         tuleap-core-subversion \
         tuleap-core-subversion-modperl \
         tuleap-documentation && \
-    yum clean all && \
-    curl -k -sS https://getcomposer.org/installer | php && mv composer.phar /usr/local/bin
+    yum clean all
 
 ENV PHP_VERSION 72
 
