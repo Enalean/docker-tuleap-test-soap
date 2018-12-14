@@ -27,7 +27,6 @@ RUN yum -y install epel-release centos-release-scl && \
         tuleap-core-subversion \
         tuleap-core-subversion-modperl \
         tuleap-documentation && \
-    yum clean all && \
-    curl -k -sS https://getcomposer.org/installer | php && mv composer.phar /usr/local/bin
+    yum clean all
 
 CMD /usr/share/tuleap/tests/soap/bin/run.sh
