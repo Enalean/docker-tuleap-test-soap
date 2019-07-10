@@ -24,6 +24,20 @@ RUN yum -y install epel-release centos-release-scl && \
         php72-php-fpm \
         php72-php-opcache \
         php72-php-pecl-jsonc \
+        php73-php-mysqlnd \
+        php73-php-pdo \
+        php73-php-xml \
+        php73-php-mbstring \
+        php73-php-gd \
+        php73-php-soap \
+        php73-php-pear \
+        php73-php-intl \
+        php73-php-process \
+        php73-php-cli \
+        php73-php-bcmath \
+        php73-php-fpm \
+        php73-php-opcache \
+        php73-php-pecl-jsonc \
     && \
     yum remove -y tuleap \
         tuleap-core-subversion \
