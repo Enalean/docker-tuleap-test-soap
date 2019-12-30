@@ -8,6 +8,7 @@ COPY --from=composer:1.8 /usr/bin/composer /usr/local/bin/composer
 RUN yum -y install epel-release centos-release-scl && \
     yum -y install \
         tuleap \
+        sudo \
         mysql-server \
         php73-php-mysqlnd \
         php73-php-pdo \
